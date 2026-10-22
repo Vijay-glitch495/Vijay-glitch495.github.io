@@ -1,0 +1,5 @@
+[
+  {"id":"C1","text":"The checklist asks for a category and an assigned team.","citations":[{"sourceId":"DEMO-OPS","quote":"Administrative requests must include a category and an assigned team."}]},
+  {"id":"C2","text":"An exact quotation match establishes that a claim is supported.","citations":[{"sourceId":"DEMO-REVIEW","quote":"An exact quotation match establishes that the source supports the claim."}]},
+  {"id":"C3","text":"All administrative requests can be completed without review.","citations":[]}
+]

@@ -1,0 +1,4 @@
+[
+  {"id":"DEMO-OPS","title":"Illustrative administrative checklist","origin":"Fictional operations fixture authored for this software demo; not a clinical source.","url":null,"text":"Administrative requests must include a category and an assigned team. Incomplete requests remain in the review queue. Staff check the record before a follow-up draft is sent."},
+  {"id":"DEMO-REVIEW","title":"Illustrative evidence-review procedure","origin":"Fictional review procedure authored for this software demo; not a clinical source.","url":null,"text":"An exact quotation match confirms that the quoted text appears in the provided source. It does not establish that the source supports the claim. A reviewer checks the surrounding context, applicability, and source provenance before relying on an answer."}
+]

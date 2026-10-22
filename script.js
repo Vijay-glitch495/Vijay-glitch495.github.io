@@ -99,3 +99,41 @@ document.querySelectorAll('.citation-button').forEach(button => {
     }
   });
 });
+
+// Preserve native POST/CAPTCHA behavior; give feedback before leaving the page.
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  const status = document.getElementById('form-status');
+  const submit = contactForm.querySelector('[type="submit"]');
+  const label = submit.querySelector('.submit-label');
+  const fallback = document.getElementById('email-fallback');
+  let recoveryTimer;
+  const setStatus = message => { status.textContent = message; status.hidden = false; };
+  contactForm.addEventListener('invalid', event => {
+    const field = contactForm.querySelector('input:invalid, select:invalid, textarea:invalid') || event.target;
+    const fieldLabel = contactForm.querySelector(`label[for="${field.id}"]`)?.textContent || 'This field';
+    setStatus(`${fieldLabel}: ${field.validationMessage}`);
+  }, true);
+  contactForm.addEventListener('input', () => {
+    const values = new FormData(contactForm);
+    const topic = String(values.get('topic') || 'Portfolio inquiry');
+    const body = `Name: ${values.get('name') || ''}\nReply email: ${values.get('email') || ''}\n\n${values.get('message') || ''}`;
+    fallback.href = `mailto:vijaybommireddy1@gmail.com?subject=${encodeURIComponent(topic)}&body=${encodeURIComponent(body)}`;
+  });
+  contactForm.addEventListener('submit', () => {
+    submit.disabled = true;
+    label.textContent = 'Opening verification…';
+    setStatus('Opening FormSubmit. Complete its verification step to submit your message. If the next page does not open, use the email link below.');
+    recoveryTimer = setTimeout(() => {
+      submit.disabled = false;
+      label.textContent = 'Try again';
+      setStatus('If verification did not open, use “Open your email app” below. Your message is included automatically. Delivery has not been confirmed on this page.');
+    }, 15000);
+  });
+  window.addEventListener('pageshow', () => {
+    clearTimeout(recoveryTimer);
+    submit.disabled = false;
+    label.textContent = 'Send message';
+    status.hidden = true;
+  });
+}
