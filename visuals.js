@@ -27,6 +27,18 @@
   preference.addEventListener('change', applyMotion);
   applyMotion();
 
+  // Decorative motion runs only on screen; the same global control stops it.
+  const ambient = [...document.querySelectorAll('[data-ambient]')];
+  if ('IntersectionObserver' in window) {
+    const ambientObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => entry.target.classList.toggle('motion-visible', entry.isIntersecting));
+    }, { threshold: 0.15 });
+    ambient.forEach(element => ambientObserver.observe(element));
+  }
+  const updateVisibility = () => document.body.classList.toggle('page-hidden', document.hidden);
+  document.addEventListener('visibilitychange', updateVisibility);
+  updateVisibility();
+
   // Content remains visible without JS, IntersectionObserver, or motion support.
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => {
@@ -62,6 +74,8 @@
     const playIcon = play.querySelector('.play-icon');
     let active = 0;
     let timer;
+    let inView = false;
+    let manuallyPaused = false;
     const stop = () => {
       clearInterval(timer);
       timer = undefined;
@@ -89,13 +103,11 @@
     };
     buttons.forEach((button, index) => {
       button.disabled = false;
-      button.addEventListener('click', () => { stop(); show(index); });
+      button.addEventListener('click', () => { manuallyPaused = true; stop(); show(index); });
     });
     play.hidden = false;
-    play.addEventListener('click', () => {
-      if (timer) { stop(); return; }
-      if (isPaused()) return;
-      show(0);
+    const start = () => {
+      if (timer || isPaused() || !inView || document.hidden || manuallyPaused) return;
       copy.setAttribute('aria-live', 'off');
       playLabel.textContent = 'Pause walkthrough';
       playIcon.textContent = 'Ⅱ';
@@ -103,19 +115,75 @@
       play.setAttribute('aria-label', `Pause ${projectName} walkthrough`);
       story.classList.add('is-playing');
       timer = setInterval(() => {
-        if (active === steps.length - 1) { stop(); return; }
-        show(active + 1);
-      }, 3200);
+        show((active + 1) % steps.length);
+      }, 5000);
+    };
+    const syncPlayback = () => {
+      if (isPaused() || !inView || document.hidden || manuallyPaused) stop();
+      else start();
+    };
+    play.addEventListener('click', () => {
+      if (timer) { manuallyPaused = true; stop(); return; }
+      manuallyPaused = false;
+      start();
+    });
+    // Keyboard readers can inspect the explanation without it changing underneath them.
+    story.addEventListener('focusin', event => {
+      if (event.target.matches(':focus-visible')) { manuallyPaused = true; stop(); }
     });
     const updateMotion = () => {
-      if (isPaused()) stop();
       play.disabled = isPaused();
-      play.title = isPaused() ? 'Motion is paused. Select any step to read it.' : 'Play a short illustrated explanation; this does not run the demo.';
+      play.title = isPaused() ? 'Motion is paused. Select any step to read it.' : 'Automatically plays while visible. Pause at any time; this does not run the demo.';
+      syncPlayback();
     };
     document.addEventListener('portfolio-motion-change', updateMotion);
-    document.addEventListener('visibilitychange', () => { if (document.hidden) stop(); });
+    document.addEventListener('visibilitychange', syncPlayback);
     window.addEventListener('pagehide', stop);
+    window.addEventListener('pageshow', syncPlayback);
+    if ('IntersectionObserver' in window) {
+      const playbackObserver = new IntersectionObserver(entries => {
+        inView = entries[0].isIntersecting;
+        syncPlayback();
+      }, { threshold: 0.25 });
+      playbackObserver.observe(story.querySelector('.walkthrough'));
+    } else {
+      inView = true;
+    }
     show(0, false);
     updateMotion();
   });
+
+  // The full repository directory is server-rendered; JS adds discovery controls.
+  const directory = document.querySelector('.project-directory');
+  if (directory) {
+    const search = directory.querySelector('#project-search');
+    const filters = [...directory.querySelectorAll('.directory-filters button')];
+    const rows = [...directory.querySelectorAll('.repository-row')];
+    const status = directory.querySelector('#directory-status');
+    let category = 'all';
+    directory.querySelector('.directory-tools').hidden = false;
+    const filter = () => {
+      const query = search.value.trim().toLowerCase();
+      const terms = query.split(/\s+/).filter(Boolean);
+      let count = 0;
+      rows.forEach(row => {
+        const matchesCategory = category === 'all' || row.dataset.category === category;
+        row.hidden = !matchesCategory || !terms.every(term => row.dataset.search.includes(term));
+        if (!row.hidden) count++;
+      });
+      status.textContent = `Showing ${count} of ${rows.length} repositories`;
+      directory.querySelector('.directory-empty').hidden = count !== 0;
+      filters.forEach(button => {
+        const selected = button.dataset.category === category;
+        button.classList.toggle('active', selected);
+        button.setAttribute('aria-pressed', String(selected));
+      });
+    };
+    search.addEventListener('input', filter);
+    filters.forEach(button => button.addEventListener('click', () => {
+      category = button.dataset.category;
+      filter();
+    }));
+    filter();
+  }
 })();
