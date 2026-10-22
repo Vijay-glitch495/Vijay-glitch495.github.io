@@ -6,7 +6,13 @@ A buildless GitHub Pages portfolio focused on healthcare automation, agents, and
 
 ## Files and deployment
 
-- `index.html`: biography, professional outcomes, experience, publications, curated projects, conference and journal reviewing, and contact form.
+- `index.html`: concise introduction, portrait, and selected project previews.
+- `projects.html`: project portfolio, working demos, source code, and limitations.
+- `research.html`: publications, filters, citation export, interests, and research news.
+- `experience.html`: professional outcomes, employment, education, and résumé download.
+- `peer-review.html`: conference and journal service, with track-specific roles.
+- `contact.html`: contact form, direct email fallback, and professional profile links.
+- `sitemap.xml`: canonical public page URLs.
 - `thanks.html`: return page after a contact-form submission.
 - `styles.css`: responsive presentation, keyboard focus styles, reduced-motion and print support.
 - `script.js`: mobile navigation, publication filters, BibTeX copy, contact validation feedback, submission progress, and a prefilled email fallback.
@@ -38,7 +44,7 @@ If changing the recipient, update the form action, mailto links, thank-you page,
 
 ## Content maintenance
 
-Edit the relevant section in `index.html`. When adding publications, update filter counts and BibTeX in `script.js`. Distinguish published papers, accepted work, and preprints. Keep conference service track-specific. Per the owner’s correction, journal service is exactly **one completed review for JMIR Formative Research**; do not duplicate it under the publisher or another journal title. Do not publish manuscript assignments, private correspondence, or review contents.
+Edit the relevant dedicated HTML page. Navigation and footer markup is included on every page so links work without JavaScript. Update those shared regions consistently when changing navigation. The homepage script redirects old `/#research`, `/#projects`, `/#experience`, `/#service`, and `/#contact` links to their new pages. Each page has a unique title, description, canonical URL, and active navigation state. When adding publications, update filter counts and BibTeX in `script.js`. Distinguish published papers, accepted work, and preprints. Keep conference service track-specific. Per the owner’s correction, journal service is exactly **one completed review for JMIR Formative Research**; do not duplicate it under the publisher or another journal title. Do not publish manuscript assignments, private correspondence, or review contents.
 
 The portrait was supplied by the owner on October 21, 2026; its original JPEG bytes are used without image editing. Employment, education, and professional outcome figures follow the owner's résumé, which is published with permission at `assets/Vijay_Bommireddy_Resume.pdf`. Replace that file to update the download.
 

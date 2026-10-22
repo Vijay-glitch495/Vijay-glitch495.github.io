@@ -1,7 +1,8 @@
 'use strict';
 
 document.body.classList.add('js');
-document.getElementById('year').textContent = String(new Date().getFullYear());
+const year = document.getElementById('year');
+if (year) year.textContent = String(new Date().getFullYear());
 
 const menuButton = document.querySelector('.menu-toggle');
 const navigation = document.getElementById('navigation');
@@ -21,12 +22,12 @@ document.addEventListener('keydown', event => {
 document.addEventListener('click', event => {
   if (!navigation.contains(event.target) && !menuButton.contains(event.target)) setMenu(false);
 });
-window.matchMedia('(min-width: 601px)').addEventListener('change', () => setMenu(false));
+window.matchMedia('(min-width: 961px)').addEventListener('change', () => setMenu(false));
 
 const filterGroup = document.querySelector('.publication-filters');
 const papers = [...document.querySelectorAll('.publication')];
-filterGroup.hidden = false;
-filterGroup.querySelectorAll('button').forEach(button => {
+if (filterGroup) filterGroup.hidden = false;
+filterGroup?.querySelectorAll('button').forEach(button => {
   button.addEventListener('click', () => {
     const selected = button.dataset.filter;
     let count = 0;
@@ -137,3 +138,13 @@ if (contactForm) {
     status.hidden = true;
   });
 }
+
+// Compatibility for links shared before the portfolio became multi-page.
+const legacyPages = { '#projects': 'projects.html', '#experience': 'experience.html', '#research': 'research.html', '#service': 'peer-review.html', '#contact': 'contact.html' };
+function followLegacyLink() {
+  if ((location.pathname === '/' || location.pathname.endsWith('/index.html')) && legacyPages[location.hash]) {
+    location.replace(legacyPages[location.hash]);
+  }
+}
+followLegacyLink();
+window.addEventListener('hashchange', followLegacyLink);
