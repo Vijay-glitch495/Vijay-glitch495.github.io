@@ -1,5 +1,9 @@
 # CareFlow
 
+![Concept illustration for CareFlow](../../assets/project-art/careflow.webp)
+
+*Concept artwork; not a product screenshot or experimental result.*
+
 **A bounded administrative workflow prototype for exploring human oversight in healthcare automation.**
 
 [Interactive demo](https://Vijay-glitch495.github.io/projects/careflow/) · [Portfolio](https://Vijay-glitch495.github.io/)

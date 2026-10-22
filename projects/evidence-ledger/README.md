@@ -1,5 +1,9 @@
 # Evidence Ledger
 
+![Concept illustration for Evidence Ledger](../../assets/project-art/evidence-ledger.webp)
+
+*Concept artwork; not a product screenshot or experimental result.*
+
 **Source and quotation checks for inspecting generated answers.**
 
 [Interactive demo](https://Vijay-glitch495.github.io/projects/evidence-ledger/) · [Portfolio](https://Vijay-glitch495.github.io/)

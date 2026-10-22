@@ -14,7 +14,9 @@ A buildless GitHub Pages portfolio focused on healthcare automation, agents, and
 - `contact.html`: contact form, direct email fallback, and professional profile links.
 - `sitemap.xml`: canonical public page URLs.
 - `thanks.html`: return page after a contact-form submission.
-- `styles.css`: responsive presentation, keyboard focus styles, reduced-motion and print support.
+- `styles.css`: responsive presentation, keyboard focus styles, and print support.
+- `visuals.css` and `visuals.js`: illustrated project cards, optional three-step walkthroughs, subtle entrance effects, and a persistent pause-motion control. The operating system’s reduced-motion setting is respected.
+- `assets/project-art/`: optimized original concept artwork and generation prompts.
 - `script.js`: mobile navigation, publication filters, BibTeX copy, contact validation feedback, submission progress, and a prefilled email fallback.
 - `projects/careflow/`: runnable approval-gated administrative workflow prototype, CLI, browser demo, tests, and README.
 - `projects/evidence-ledger/`: runnable citation-auditing and lexical-retrieval prototype, CLI, browser demo, tests, and README.
