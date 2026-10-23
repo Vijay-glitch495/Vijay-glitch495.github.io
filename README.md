@@ -7,7 +7,7 @@ A buildless GitHub Pages portfolio focused on healthcare automation, agents, and
 ## Files and deployment
 
 - `index.html`: concise introduction, portrait, and selected project previews.
-- `projects.html`: project portfolio, working demos, six earlier project cards, and a searchable 47-repository archive.
+- `projects.html`: six selected projects in three sections: automation and evidence, research and retrieval, and applied analytics.
 - `research.html`: publications, filters, citation export, interests, and research news.
 - `experience.html`: professional outcomes, employment, education, and résumé download.
 - `peer-review.html`: conference and journal service, with track-specific roles.
@@ -50,7 +50,7 @@ Edit the relevant dedicated HTML page. Navigation and footer markup is included 
 
 The portrait was supplied by the owner on October 21, 2026; its original JPEG bytes are used without image editing. Employment, education, and professional outcome figures follow the owner's résumé, which is published with permission at `assets/Vijay_Bommireddy_Resume.pdf`. Replace that file to update the download.
 
-The VALID-Agent figure comes from the [project repository](https://github.com/Vijay-glitch495/VALID-Agent/blob/main/docs/valid_agent_real_dashboard.png). It is exploratory: the source README explains heuristic labels, reconstructed fields, and scoring assumptions. Equipment Health Monitoring uses synthetic data. Food Demand Analysis describes repository artifacts and verified CSV coverage, not a measured business improvement. Earlier projects have full cards on `projects.html`, with descriptions checked against their repository documentation. The wider archive includes all 47 public non-profile repositories observed on October 22, 2026, including experiments and learning resources; inclusion does not imply original authorship or a verified deployment. Private repositories are not listed. Update the archive when repositories are added or renamed.
+The VALID-Agent figure comes from the [project repository](https://github.com/Vijay-glitch495/VALID-Agent/blob/main/docs/valid_agent_real_dashboard.png). It is exploratory: the source README explains heuristic labels, reconstructed fields, and scoring assumptions. Equipment Health Monitoring uses synthetic data. Food Demand Analysis describes repository artifacts and verified CSV coverage, not a measured business improvement. The project page is intentionally capped at six: CareFlow, Evidence Ledger, VALID-Agent, Medical RAG Chatbot, Equipment Health Monitoring, and Food Demand Analysis. Earlier repository work is retained on GitHub; the website does not enumerate the full account. Keep tutorial lineage and source acknowledgments with the selected studies.
 
 ## Public research references
 
@@ -70,8 +70,8 @@ node --test projects/careflow/core.test.mjs projects/evidence-ledger/core.test.m
 
 The prototypes share their engines between browser demos and CLIs. Examples are fictional software fixtures. They are not patient data, clinical studies, or evidence of deployment. The optional Ollama adapter has transport-stub tests; no real-model performance is claimed. Each project README defines its scope, reproduction steps, and limits.
 
-## Motion and project discovery
+## Motion and project selection
 
 Project walkthroughs start automatically when their explanations enter the viewport and loop at five-second intervals. Manual step selection or each walkthrough’s Pause button stops that walkthrough. Focusing its controls pauses automatic playback for reading; Play can explicitly resume it. Global Pause motion controls on the Projects page and in the footer persist across visits. Device reduced-motion settings always take priority. Background tabs and offscreen walkthroughs suspend their timers. Decorative image and workflow animations run only while visible and stop with the same controls. None of these presentation animations executes project code.
 
-The earlier-project diagrams are illustrative workflows, not plots or measured outcomes. The repository archive renders in HTML, so links remain available without JavaScript; search and category filters progressively enhance it.
+Each project has a distinct automatic motion treatment: documents passing an approval gate (CareFlow), a quotation highlight and citation link (Evidence Ledger), trajectory and revisit tracing (VALID-Agent), passage scanning and retrieval (Medical RAG), a sensor waveform and classifier (Equipment Health), and report bars with row selection (Food Demand). All illustrations are conceptual, not measured outcomes or actual product screenshots. The website lists exactly six selected projects; additional repositories remain accessible from the GitHub profile.

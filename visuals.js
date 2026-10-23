@@ -153,37 +153,4 @@
     updateMotion();
   });
 
-  // The full repository directory is server-rendered; JS adds discovery controls.
-  const directory = document.querySelector('.project-directory');
-  if (directory) {
-    const search = directory.querySelector('#project-search');
-    const filters = [...directory.querySelectorAll('.directory-filters button')];
-    const rows = [...directory.querySelectorAll('.repository-row')];
-    const status = directory.querySelector('#directory-status');
-    let category = 'all';
-    directory.querySelector('.directory-tools').hidden = false;
-    const filter = () => {
-      const query = search.value.trim().toLowerCase();
-      const terms = query.split(/\s+/).filter(Boolean);
-      let count = 0;
-      rows.forEach(row => {
-        const matchesCategory = category === 'all' || row.dataset.category === category;
-        row.hidden = !matchesCategory || !terms.every(term => row.dataset.search.includes(term));
-        if (!row.hidden) count++;
-      });
-      status.textContent = `Showing ${count} of ${rows.length} repositories`;
-      directory.querySelector('.directory-empty').hidden = count !== 0;
-      filters.forEach(button => {
-        const selected = button.dataset.category === category;
-        button.classList.toggle('active', selected);
-        button.setAttribute('aria-pressed', String(selected));
-      });
-    };
-    search.addEventListener('input', filter);
-    filters.forEach(button => button.addEventListener('click', () => {
-      category = button.dataset.category;
-      filter();
-    }));
-    filter();
-  }
 })();
