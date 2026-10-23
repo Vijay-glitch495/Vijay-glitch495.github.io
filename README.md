@@ -54,6 +54,8 @@ The VALID-Agent figure comes from the [project repository](https://github.com/Vi
 
 ## Public research references
 
+- https://orcid.org/0009-0002-7639-6702 (owner’s ORCID iD, verified from an ORCID notification on October 23, 2026; linked from the homepage, Research, Contact, and shared footers)
+
 - https://arxiv.org/abs/2609.06391
 - https://doi.org/10.1109/ICIRCA54612.2022.9985724
 - https://doi.org/10.1109/ICIRCA54612.2022.9985708
