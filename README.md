@@ -52,6 +52,10 @@ The portrait was supplied by the owner on October 21, 2026; its original JPEG by
 
 The VALID-Agent figure comes from the [project repository](https://github.com/Vijay-glitch495/VALID-Agent/blob/main/docs/valid_agent_real_dashboard.png). It is exploratory: the source README explains heuristic labels, reconstructed fields, and scoring assumptions. Equipment Health Monitoring uses synthetic data. Food Demand Analysis describes repository artifacts and verified CSV coverage, not a measured business improvement. The project page is intentionally capped at six: CareFlow, Evidence Ledger, VALID-Agent, Medical RAG Chatbot, Equipment Health Monitoring, and Food Demand Analysis. Earlier repository work is retained on GitHub; the website does not enumerate the full account. Keep tutorial lineage and source acknowledgments with the selected studies.
 
+## Academic service and reusable bio
+
+`BIO.md` contains a reusable professional biography. Feature **ACM FAccT 2027 — Invited Reviewer · Invitation accepted** first on the peer-review page and include it as academic service in the homepage bio and Experience page. The owner supplied the OpenReview acceptance confirmation on October 28, 2026, for profile `~Vijay_Bommireddy3`. This records an accepted reviewer invitation, not completed reviews. Do not add a review count, a Program Committee title, or manuscript details without further confirmation. The existing JMIR Formative Research record remains one completed review.
+
 ## Public research references
 
 - https://orcid.org/0009-0002-7639-6702 (owner’s ORCID iD, verified from an ORCID notification on October 23, 2026; linked from the homepage, Research, Contact, and shared footers)

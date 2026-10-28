@@ -33,3 +33,14 @@ body.motion-paused *,body.motion-paused *:before,body.motion-paused *:after{anim
 @media print{.project-navigation{display:none}.collection-heading{break-after:avoid}.curated-card{break-inside:avoid}.project-motion svg *,.agent-motion svg *,.home-art img{animation:none!important}.project-motion{max-height:180px;overflow:hidden}.valid-card{background:white;color:var(--ink)}.valid-card .work-copy>p{color:var(--muted)}.valid-card .project-output strong,.valid-card .project-actions>a{color:var(--ink)}}
 
 .curated-card>header{min-height:109px;display:flex;flex-direction:column;justify-content:center}.curated-card>header .eyebrow,.curated-card>header .project-meta{font-size:9px;line-height:1.7;margin:0 0 10px;min-height:16px}.featured-publication h4{font:26px/1.4 var(--serif);letter-spacing:-.025em}@media(max-width:600px){.featured-publication h4{font-size:24px}}
+
+/* Featured academic service, aligned with the portfolio's existing palette. */
+.hero-service{margin-top:20px;padding-left:14px;border-left:2px solid var(--accent);display:flex;flex-direction:column;align-items:flex-start;gap:5px;font-size:12px;line-height:1.6}
+.hero-service>span{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.hero-service>a{font-weight:600;text-underline-offset:4px}.hero-service>a:hover{text-decoration:underline}.hero-service small{font-size:11px;color:var(--muted)}
+.service-feature{display:grid;grid-template-columns:1.4fr 1fr;gap:50px;padding:38px 40px;margin-bottom:30px;background:#f2eeeb;border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:12px;scroll-margin-top:120px}
+.service-feature h2{font-size:clamp(35px,4vw,49px);line-height:1.15;margin:15px 0 17px}.service-feature .service-venue{max-width:510px;font-size:15px;line-height:1.8;color:var(--muted)}
+.service-feature .text-link{margin-top:23px;display:inline-flex;font-size:12px}.service-feature-role{align-self:center;border-left:1px solid #d8ceca;padding-left:35px}.service-status{display:inline-flex;align-items:center;gap:8px;font-size:11px;color:var(--accent);font-weight:600}.service-feature-role h3{font:29px/1.3 var(--serif);margin:17px 0 11px}.service-feature-role>p{font-size:14px;line-height:1.8;color:var(--muted);max-width:330px}
+.academic-service{margin:36px 0 30px}.academic-service>h2{font-size:30px;margin-top:12px}.academic-service .role{margin-top:20px;border-bottom:1px solid var(--line)}.academic-service .text-link{display:inline-flex;margin-top:15px;font-size:12px}
+@media(max-width:700px){.service-feature{grid-template-columns:1fr;gap:25px;padding:27px 25px}.service-feature-role{padding:24px 0 0;border-left:0;border-top:1px solid #d8ceca}.service-feature h2{font-size:38px}.service-feature .service-venue{font-size:14px}.service-feature-role>p{max-width:none}.hero-service{font-size:12px}.academic-service>h2{font-size:28px}}
+@media print{.service-feature{break-inside:avoid}.hero-service{font-size:11px}}
