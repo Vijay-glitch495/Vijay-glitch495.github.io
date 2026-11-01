@@ -81,3 +81,18 @@ The prototypes share their engines between browser demos and CLIs. Examples are 
 Project walkthroughs start automatically when their explanations enter the viewport and loop at five-second intervals. Manual step selection or each walkthrough’s Pause button stops that walkthrough. Focusing its controls pauses automatic playback for reading; Play can explicitly resume it. Global Pause motion controls on the Projects page and in the footer persist across visits. Device reduced-motion settings always take priority. Background tabs and offscreen walkthroughs suspend their timers. Decorative image and workflow animations run only while visible and stop with the same controls. None of these presentation animations executes project code.
 
 Each project has a distinct automatic motion treatment: documents passing an approval gate (CareFlow), a quotation highlight and citation link (Evidence Ledger), trajectory and revisit tracing (VALID-Agent), passage scanning and retrieval (Medical RAG), a sensor waveform and classifier (Equipment Health), and report bars with row selection (Food Demand). All illustrations are conceptual, not measured outcomes or actual product screenshots. The website lists exactly six selected projects; additional repositories remain accessible from the GitHub profile.
+
+## DeepMath posters and November 2026 service update
+
+The Research page includes a separate `#posters` section for two DeepMath 2026 presentations, October 29–30 in Columbus, Ohio. Presentation status is based on the owner's November 1 confirmation. The supplied Hankel poster is published unchanged; the weight-sharing poster was newly prepared from the supplied manuscript. Both downloads are 48 × 36 inch PDFs. **The source manuscripts are not published.** Presenter attribution is used because the supplied manuscripts omit author names.
+
+`assets/posters/` contains the two posters and optimized WebP previews. The new poster's proof, analytical illustration, accuracy table, and bounds follow the supplied text. The 77.5% and 7.7% figures use different baselines; 80 of 160 fits reached the iteration cap. No classification advantage is claimed. Rebuild the new poster with `python scripts/build_weight_sharing_poster.py` (ReportLab, Matplotlib, and PyMuPDF). This script reuses only the identity card from the existing poster and does not require a manuscript upload.
+
+IEEE ISCAS 2027 is listed as reviews completed, based on the owner's explicit confirmation. TRUSTMORE 2026 and ICACCM 2026 are listed as reviewer service without completion counts or committee titles. TRUSTMORE is a workshop at IEEE BigData; ICACCM is technically co-sponsored by IEEE UP Section. These additions are separate from the existing FAccT invitation and the single JMIR review. No review assignments or private correspondence are published.
+
+Official venue references:
+- https://2027.ieee-iscas.org/
+- https://trustmoreai.github.io/workshop2026/
+- https://bigdataieee.org/BigData2026/program/workshops/
+- https://www.icaccm.in/
+- https://deepmath-conference.com/
