@@ -63,3 +63,10 @@ body.motion-paused *,body.motion-paused *:before,body.motion-paused *:after{anim
 @media(max-width:760px){.poster-section{margin-block:40px 50px}.poster-section-heading{grid-template-columns:1fr;gap:23px}.poster-grid{grid-template-columns:1fr;gap:25px}.poster-intro p{font-size:13px}.poster-copy{padding:24px}.poster-copy h3{font-size:27px}.poster-preview{padding:13px}.poster-open{right:22px;bottom:22px}.poster-format{font-size:10px;line-height:1.8}.poster-section-heading .eyebrow{font-size:9px}}
 @media(prefers-reduced-motion:reduce){.poster-preview img{transition:none}.poster-preview:hover img{transform:none}}
 @media print{.poster-card{break-inside:avoid}.poster-section{margin-block:30px}.poster-open{display:none}}
+
+/* Workshop roles stay distinct from main-conference and journal service. */
+.neurips-service{margin-block:40px 25px;scroll-margin-top:110px}.neurips-heading{display:flex;justify-content:space-between;gap:35px;align-items:end;margin-bottom:25px}.neurips-heading .eyebrow{margin-bottom:12px}.neurips-heading h2{font-size:35px}.neurips-heading>p{font-size:13px;color:var(--muted);max-width:300px;line-height:1.8}
+.neurips-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.workshop-review{padding:23px 25px;background:var(--white);border:1px solid var(--line);border-radius:9px}.workshop-review h3{font:23px/1.3 var(--serif);letter-spacing:-.02em;overflow-wrap:anywhere}.workshop-review p{font-size:11px;color:var(--muted);margin-top:9px}.review[id]{scroll-margin-top:115px}
+@media(max-width:760px){.neurips-heading{display:block}.neurips-heading h2{font-size:30px}.neurips-heading>p{margin-top:18px;max-width:none}.neurips-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.workshop-review{padding:19px 17px}.workshop-review h3{font-size:20px}}
+@media(max-width:400px){.neurips-grid{grid-template-columns:1fr}.workshop-review{display:flex;align-items:center;justify-content:space-between;gap:18px}.workshop-review p{margin:0;flex-shrink:0}}
+@media print{.workshop-review{break-inside:avoid}}

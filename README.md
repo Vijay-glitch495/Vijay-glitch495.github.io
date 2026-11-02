@@ -54,7 +54,7 @@ The VALID-Agent figure comes from the [project repository](https://github.com/Vi
 
 ## Academic service and reusable bio
 
-`BIO.md` contains a reusable professional biography. Feature **ACM FAccT 2027 — Invited Reviewer · Invitation accepted** first on the peer-review page and include it as academic service in the homepage bio and Experience page. The owner supplied the OpenReview acceptance confirmation on October 28, 2026, for profile `~Vijay_Bommireddy3`. This records an accepted reviewer invitation, not completed reviews. Do not add a review count, a Program Committee title, or manuscript details without further confirmation. The existing JMIR Formative Research record remains one completed review.
+`BIO.md` contains a reusable professional biography. Use **ACM FAccT 2027 — Reviewer** as a standard conference-service entry and include it as academic service in the homepage bio and Experience page. The owner requested plain reviewer labels without a separate featured invitation card. The owner supplied the OpenReview acceptance confirmation on October 28, 2026, for profile `~Vijay_Bommireddy3`. This records an accepted reviewer invitation, not completed reviews. Do not add a review count, a Program Committee title, or manuscript details without further confirmation. The existing JMIR Formative Research record remains one completed review.
 
 ## Public research references
 
@@ -96,3 +96,9 @@ Official venue references:
 - https://bigdataieee.org/BigData2026/program/workshops/
 - https://www.icaccm.in/
 - https://deepmath-conference.com/
+
+## NeurIPS workshop service and presentation wording
+
+The peer-review page has a dedicated `#neurips-workshops` section with nine 2026 workshop reviewer roles: AI4DD, AI4GOOD, AI4Science, BrainBodyFM, DiffuLM, GlobalSouthAI, Interp4Discovery, Verify-Agents, and WiML. The names and year were read from the owner's `Venues _ OpenReview History.pdf`, captured October 17, 2026, which lists each under **Your Active Consoles** as **Reviewers**. The source establishes reviewer-console membership; no completed-review count is inferred. These are workshop roles, not NeurIPS main-conference reviewing. UserSim is excluded because the available email only acknowledges an application. Do not publish the source account-history PDF or private review assignments.
+
+The DeepMath section heading is now **DeepMath 2026 — Poster presentations**. The public website uses plain reviewer labels and lists FAccT with the other conferences. The underlying invitation status is retained here for content accuracy without foregrounding it on the website.
