@@ -53,7 +53,7 @@ body.motion-paused *,body.motion-paused *:before,body.motion-paused *:after{anim
 .poster-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}.poster-card{display:flex;flex-direction:column;overflow:hidden;background:var(--white);border:1px solid var(--line);border-radius:12px}
 .poster-preview{position:relative;display:block;padding:17px;background:#eef1f1;border-bottom:1px solid var(--line)}
 .poster-preview img{width:100%;aspect-ratio:4 / 3;object-fit:contain;background:white;box-shadow:0 6px 16px #1b304016;transition:transform .3s ease}
-.weight-sharing-poster .poster-preview{background:#eee8f1}
+.weight-sharing-poster .poster-preview{background:#e8f0ec}
 .poster-preview:hover img{transform:translateY(-3px)}.poster-open{position:absolute;right:27px;bottom:27px;border:1px solid #ffffffc0;border-radius:5px;background:var(--ink);color:white;padding:8px 12px;font-size:10px;box-shadow:0 3px 9px #1b304020}
 .poster-copy{padding:28px;display:flex;flex:1;flex-direction:column}.poster-meta{display:flex;flex-wrap:wrap;gap:8px 17px;color:var(--accent);font-size:9px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;margin-bottom:17px}
 .poster-copy h3{font:28px/1.2 var(--serif);letter-spacing:-.025em}.poster-subtitle{margin-top:10px;font-size:12px;font-weight:600;color:var(--ink)}

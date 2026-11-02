@@ -1,0 +1,58 @@
+/* The icon shows the mode available on the next click. */
+:root{color-scheme:light}
+.theme-toggle{position:relative;display:inline-grid;place-items:center;width:44px;height:44px;flex:0 0 44px;border:1px solid var(--line);border-radius:50%;background:var(--white);color:var(--ink);padding:0;overflow:hidden;transition:background .2s,border-color .2s}
+.theme-toggle:hover{border-color:var(--accent);background:var(--tint)}
+.theme-toggle svg{position:absolute;width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round;transition:transform .35s ease,opacity .25s ease}
+.theme-sun{opacity:0;transform:rotate(-90deg) scale(.45)}.theme-moon{opacity:1;transform:rotate(0) scale(1)}
+[data-theme=dark] .theme-sun{opacity:1;transform:rotate(0) scale(1)}[data-theme=dark] .theme-moon{opacity:0;transform:rotate(90deg) scale(.45)}
+.header-inner{gap:18px}.header-inner .brand{order:0}.header-inner nav{order:1;margin-left:auto}.header-inner>.theme-toggle{order:2}.header-inner>.menu-toggle{order:3}
+.theme-toggle-floating{position:fixed;top:20px;right:20px;z-index:40}
+.demo-header .container{gap:18px}.demo-header .container>a:nth-child(2){margin-left:auto}
+@media(max-width:960px){.header-inner>.theme-toggle{margin-left:auto}.header-inner nav{margin-left:0}.header-inner{gap:12px}}
+@media(max-width:400px){.header-inner{gap:8px}body.js .menu-toggle{font-size:0;padding:10px;width:44px;height:44px;justify-content:center}body.js .menu-toggle>span{font-size:20px}.demo-header .container{flex-wrap:wrap;gap:12px}.demo-header .container>a:first-child{flex:1}.demo-header .container>a:nth-child(2){order:3;width:100%;margin:0}.demo-header .theme-toggle{margin-left:auto}}
+@media(max-width:360px){.hero-copy{min-width:0}.home-hero h1{font-size:46px}.hero-position{font-size:22px}.header-inner .brand{font-size:11px;gap:8px}.header-inner .brand small{font-size:7px}}
+@media screen{
+:root[data-theme=dark]{color-scheme:dark;--paper:#101820;--white:#192630;--ink:#edf1f3;--muted:#adbac4;--line:#364650;--accent:#e4a4b6;--tint:#21313b}
+[data-theme=dark] .site-header{background:#101820f5}
+[data-theme=dark] :is(.home-work,.work-card,.education-line,.review-columns>div,.project-story,.archive-card,.thanks-card,.demo-panel,.project-card-heading){background:var(--white);border-color:var(--line)}
+[data-theme=dark] :is(.site-footer,.collaboration,.outcomes article,.featured-publication,.news-panel,.service-feature,.walkthrough,.project-visual,.evidence-visual,.careflow-preview,.ledger-preview,.demo-note,.demo-status){background:var(--tint);border-color:var(--line)}
+[data-theme=dark] :is(.project-visual:hover,.evidence-visual:hover,.secondary:hover){background:#293c48;color:var(--ink)}
+[data-theme=dark] :is(.flow-line,.mini-step,.walk-step,.form-field input,.form-field select,.form-field textarea,dialog textarea,.demo-panel input,.demo-panel select,.json-input,.button-light){background:var(--paper);color:var(--ink);border-color:#4e626f}
+[data-theme=dark] :is(.primary,.monogram,.site-header nav .nav-contact,.publication-filters button.active,.toast,.poster-open,.mini-step.selected,.walk-step.active,.skip-link){background:#d8e5ec;color:#14232d;border-color:#d8e5ec}
+[data-theme=dark] :is(.primary:hover,.site-header nav .nav-contact:hover,.site-header nav .nav-contact[aria-current=page]){background:#e4a4b6;color:#14232d;border-color:#e4a4b6}
+[data-theme=dark] :is(.monogram>span,.mini-step.selected>span){color:#5e3341}
+[data-theme=dark] :is(.research-project,.valid-card){background:#203441;color:#edf1f3}
+[data-theme=dark] :is(.research-project p,.research-project small,.valid-card .work-copy>p){color:#c0ccd3}
+[data-theme=dark] .research-project .text-link{color:#edf1f3}
+@media(max-width:960px){[data-theme=dark] .site-header nav a[aria-current=page]:not(.nav-contact){background:#302630}}
+[data-theme=dark] body.js .menu-toggle{background:var(--white)}
+[data-theme=dark] :is(.role,.tags span,.footer-bottom,.evidence-row,.review,.education-line,.research-project-side,.research-focus>div,.service-feature-role){border-color:var(--line)}
+[data-theme=dark] .education-mark{background:#392b36}
+[data-theme=dark] .explore-arrow{background:#293d49}
+[data-theme=dark] .explore-item:hover .explore-arrow{background:#d8e5ec;color:#14232d}
+[data-theme=dark] :is(.source-label,.step-marker,.archive-copy .archive-output){color:var(--muted)}
+[data-theme=dark] :is(.step-check,.evidence-row strong){color:#abd2bf}
+[data-theme=dark] .evidence-human strong{color:#edb2c1}
+[data-theme=dark] :is(.step-wait,.form-status,.demo-status.error){background:#382933;color:#f0beca}
+[data-theme=dark] .quote-mark{color:#59434e}
+[data-theme=dark] :is(.form-field input::placeholder,.form-field textarea::placeholder){color:#9baab6}
+[data-theme=dark] :is(.art-open,.art-badge,.art-caption){color:#263d4a}
+[data-theme=dark] .poster-preview{background:#23343e}
+[data-theme=dark] .weight-sharing-poster .poster-preview{background:#2b3838}
+/* Scientific posters and photographs retain their original colors. */
+[data-theme=dark] .project-motion{background:#1b2d36;border-color:var(--line)}
+[data-theme=dark] .citation-motion,[data-theme=dark] .retrieval-motion{background:#302a32}
+[data-theme=dark] .dashboard-motion{background:#29312c}
+[data-theme=dark] .project-motion svg text{fill:#c7d5dc}
+[data-theme=dark] .project-motion figcaption{color:#afc0ca}
+[data-theme=dark] :is(.queued-doc rect,.draft-doc rect,.source-sheet,.passage-stack rect,.answer-sheet rect,.sensor-label rect,.dashboard-shell){fill:#243b46;stroke:#96b2ae}
+[data-theme=dark] :is(.scene-track,.source-lines,.passage-lines,.retrieval-path,.answer-sheet path,.sensor-baseline,.dashboard-toolbar,.dashboard-table path,.dashboard-axis){stroke:#67848a}
+[data-theme=dark] .sensor-wave{stroke:#a1c9ca}
+[data-theme=dark] .retrieval-packet{fill:#e4a4b6}
+[data-theme=dark] .answer-cite{fill:#e4a4b6!important}
+[data-theme=dark] .walk-progress{background:#354a52}
+[data-theme=dark] :is(.status-chip,.status-chip.completed,.status-chip.citation_checks_passed){background:#24483d;color:#c7e8d6}
+[data-theme=dark] :is(.status-chip.waiting,.status-chip.needs_citation_repair,.status-chip.uncited){background:#49313c;color:#f4c4d0}
+}
+@media(prefers-reduced-motion:reduce){.theme-toggle,.theme-toggle svg{transition:none}}
+@media print{.theme-toggle{display:none!important}}
