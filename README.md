@@ -58,6 +58,7 @@ The VALID-Agent figure comes from the [project repository](https://github.com/Vi
 
 ## Public research references
 
+- https://scholar.google.com/citations?user=rnRZpr8AAAAJ&hl=en (owner-supplied correction on November 3, 2026; use this profile in both visible links and homepage `sameAs` metadata)
 - https://orcid.org/0009-0002-7639-6702 (owner’s ORCID iD, verified from an ORCID notification on October 23, 2026; linked from the homepage, Research, Contact, and shared footers)
 
 - https://arxiv.org/abs/2609.06391
@@ -106,3 +107,7 @@ The DeepMath section heading is now **DeepMath 2026 — Accepted conference post
 ## Light and dark themes
 
 Every page, including both project demos and the thank-you page, has an accessible icon-only sun/moon toggle. `theme.js` applies the stored preference before the page renders, otherwise follows the device preference. A manual choice persists across pages and reloads; blocked local storage still allows switching for the current page. `theme.css` covers navigation, content, forms, and animated diagrams without recoloring photographs or scientific posters. Icon transitions respect reduced-motion preferences.
+
+## November 3, 2026 link audit
+
+Corrected the Google Scholar profile ID in the homepage, Research page, and structured profile metadata. Checked all nine HTML pages for existing internal files and section anchors. The six linked project source destinations exist on GitHub, and conference, arXiv, and FormSubmit privacy links respond. DOI links resolve to the matching IEEE Xplore document IDs; IEEE returns an automated-client response rather than full article content. ORCID responds with its JavaScript application. Google Scholar and OpenReview require automated-access verification, and LinkedIn restricts automated requests; these responses do not establish broken profile URLs. The exact owner-supplied Scholar URL is retained. Email links and the contact-form action were inspected without submitting a message; inbox delivery remains unverified as documented above.
