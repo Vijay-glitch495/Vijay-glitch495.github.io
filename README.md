@@ -54,7 +54,7 @@ The VALID-Agent figure comes from the [project repository](https://github.com/Vi
 
 ## Academic service and reusable bio
 
-`BIO.md` contains a reusable professional biography. Use **ACM FAccT 2027 — Reviewer** as a standard conference-service entry and include it as academic service in the homepage bio and Experience page. The owner requested plain reviewer labels without a separate featured invitation card. The owner supplied the OpenReview acceptance confirmation on October 28, 2026, for profile `~Vijay_Bommireddy3`. This records an accepted reviewer invitation, not completed reviews. Do not add a review count, a Program Committee title, or manuscript details without further confirmation. The existing JMIR Formative Research record remains one completed review.
+`BIO.md` contains a reusable professional biography. Use **ACM FAccT 2027 — Reviewer** as a standard conference-service entry and include it as academic service in the homepage bio and Experience page. The owner requested plain reviewer labels without a separate featured invitation card. The owner supplied the OpenReview acceptance confirmation on October 28, 2026, for profile `~Vijay_Bommireddy3`. Vijay subsequently confirmed review completion on November 20, 2026. The page now states “Review completed”; no numerical count or Program Committee title is inferred. Do not publish manuscript details. The existing JMIR Formative Research record remains one completed review.
 
 ## Public research references
 
@@ -89,7 +89,7 @@ The Research page includes a separate `#posters` section for two DeepMath 2026 c
 
 `assets/posters/` contains the two posters and optimized WebP previews. The new poster's proof, analytical illustration, accuracy table, and bounds follow the supplied text. The 77.5% and 7.7% figures use different baselines; 80 of 160 fits reached the iteration cap. No classification advantage is claimed. Rebuild the new poster with `python scripts/build_weight_sharing_poster.py` (ReportLab, Matplotlib, PyMuPDF, and Pillow). The weight-sharing poster uses a distinct indigo, sage, and terracotta design, a centered serif title, shape-coded side-by-side schedule diagrams, and an asymmetric layout. Its presenter block uses the existing portrait asset; it does not copy artwork from the Hankel poster. The script rebuilds both its PDF and WebP preview without requiring a manuscript upload.
 
-IEEE ISCAS 2027 is listed with 7 completed reviews, confirmed by distinct submission acknowledgments in the November 11, 2026 email audit. TRUSTMORE 2026 and ICACCM 2026 are listed as reviewer service without completion counts or committee titles. TRUSTMORE is a workshop at IEEE BigData; ICACCM is technically co-sponsored by IEEE UP Section. These additions are separate from the existing FAccT invitation and the JMIR journal reviews. No review assignments or private correspondence are published.
+IEEE ISCAS 2027 is listed with 7 completed reviews, confirmed by distinct submission acknowledgments in the November 11, 2026 email audit. TRUSTMORE 2026 and ICACCM 2026 are listed as reviewer service without completion counts or committee titles. TRUSTMORE is a workshop at IEEE BigData; ICACCM is technically co-sponsored by IEEE UP Section. These additions are separate from FAccT service and the JMIR journal reviews. No review assignments or private correspondence are published.
 
 Official venue references:
 - https://2027.ieee-iscas.org/
@@ -102,7 +102,7 @@ Official venue references:
 
 The peer-review page has a dedicated `#neurips-workshops` section with nine 2026 workshop reviewer roles: AI4DD, AI4GOOD, AI4Science, BrainBodyFM, DiffuLM, GlobalSouthAI, Interp4Discovery, Verify-Agents, and WiML. The names and year were read from the owner's `Venues _ OpenReview History.pdf`, captured October 17, 2026, which lists each under **Your Active Consoles** as **Reviewers**. The source establishes reviewer-console membership; no completed-review count is inferred. These are workshop roles, not NeurIPS main-conference reviewing. UserSim is excluded because the available email only acknowledges an application. Do not publish the source account-history PDF or private review assignments.
 
-The DeepMath section heading is now **DeepMath 2026 — Accepted conference posters**. The public website uses plain reviewer labels and lists FAccT with the other conferences. The underlying invitation status is retained here for content accuracy without foregrounding it on the website.
+The DeepMath section heading is now **DeepMath 2026 — Accepted conference posters**. The public website uses plain reviewer labels and lists FAccT with the other conferences. The FAccT entry now records review completion based on the owner’s November 20, 2026 confirmation.
 
 ## Light and dark themes
 
@@ -121,3 +121,11 @@ Corrected the Google Scholar profile ID in the homepage, Research page, and stru
 - **ACM Certified Reviewer:** The editorial email confirms completion of the ACM Peer Reviewer Training and Certification Course and certified-reviewer status. List this under reviewer training, separately from service appointments. Identity verification for journal submission-system badges/pool enrollment is still pending; do not imply editorial-board membership or completed reviews for ACM TIST, TKDD, or HEALTH.
 
 Record only public role labels and aggregate review counts. Do not publish manuscript titles or IDs, correspondence, private invitation/activation links, or review contents. Reviewer applications, profile registration, and invitations alone do not establish completed service. Existing FAccT, AAAI Undergraduate Consortium, ICACCM, TRUSTMORE, and NeurIPS workshop entries are retained without new unsupported counts.
+
+## November 20, 2026 service update
+
+- **ACM FAccT 2027:** The owner directly confirmed that the review is completed. Updated the existing entry to “Reviewer · Review completed.” No count is inferred, and the completion statement is attributed to owner confirmation rather than an email receipt.
+- **IMPACT Awards:** The November 17, 2026 Simpler Media Group email confirms appointment as a judge. Added a separate Awards judging subsection; this does not represent an award win or completed assessments. The displayed year is the appointment year. Official program: https://www.simplermedia.com/smg-opens-2027-impact-awards/
+- **PLOS Digital Health:** The November 19, 2026 editorial acknowledgment confirms that the review assignment was accepted. Added Peer Reviewer under Journal peer review, without claiming completion or increasing the completed-review totals. Journal: https://journals.plos.org/digitalhealth/
+
+Existing ISCAS and JMIR counts retain their November 11 verification date. No manuscript titles, identifiers, private assignment links, or account information are published.
