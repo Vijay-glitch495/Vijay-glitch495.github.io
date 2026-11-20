@@ -129,3 +129,7 @@ Record only public role labels and aggregate review counts. Do not publish manus
 - **PLOS Digital Health:** The November 19, 2026 editorial acknowledgment confirms that the review assignment was accepted. Added Peer Reviewer under Journal peer review, without claiming completion or increasing the completed-review totals. Journal: https://journals.plos.org/digitalhealth/
 
 Existing ISCAS and JMIR counts retain their November 11 verification date. No manuscript titles, identifiers, private assignment links, or account information are published.
+
+## AAAI-27 mentor update — November 20, 2026
+
+The consortium chairs’ mentor introduction and the owner’s acceptance reply confirm the AAAI-27 Undergraduate Consortium mentoring appointment. Added Mentor alongside the existing Program Committee Member & Reviewer title in `peer-review.html#aaai-2027`, with a short description of proposal and presentation support. This is consortium service, not main-conference reviewing; no completed mentoring outcome or review count is inferred. Do not publish the mentee’s identity, contact details, proposal, or private correspondence.

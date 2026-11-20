@@ -47,3 +47,7 @@ These entries are supported by the owner’s confirmation, official email notifi
 - PLOS Digital Health — Peer Reviewer; the November 19, 2026 editorial confirmation records an accepted review assignment. Completion has not been confirmed.
 
 Keep private manuscript details, assignment links, and account credentials off the public website and repository.
+
+## AAAI-27 Undergraduate Consortium mentoring
+
+Mentor, Program Committee Member & Reviewer — AAAI-27 Undergraduate Consortium. The mentoring appointment was confirmed by the consortium chairs’ introduction and Vijay’s acceptance reply on November 20, 2026. The role supports research proposal development and preparation of oral and poster presentations. Keep mentoring distinct from main-conference paper reviewing and do not imply completed mentoring outcomes.
